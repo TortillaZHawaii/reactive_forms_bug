@@ -1,7 +1,7 @@
 import 'package:reactive_forms_annotations/reactive_forms_annotations.dart';
 import './must_match_validator.dart';
 
-part 'login_form.gform.dart';
+part 'login.gform.dart';
 
 @Rf()
 @RfGroup(validators: [
@@ -10,12 +10,12 @@ part 'login_form.gform.dart';
     matchingControlName: 'confirmPassword',
   ),
 ])
-class LoginForm {
+class Login {
   String email;
   String password;
   String confirmPassword;
 
-  LoginForm({
+  Login({
     @RfControl(
       validators: [
         RequiredValidator(),

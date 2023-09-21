@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reactive_forms_annotations/reactive_forms_annotations.dart';
-import 'package:reactive_forms_bug/login_form.dart';
+import 'package:reactive_forms_bug/login.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -8,7 +8,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LoginFormFormBuilder(
+      body: LoginFormBuilder(
         builder: (context, formModel, child) {
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
                   labelText: 'Confirm Password',
                 ),
               ),
-              ReactiveLoginFormFormConsumer(
+              ReactiveLoginFormConsumer(
                 builder: (context, formModel, child) => ElevatedButton(
                   onPressed: formModel.form.valid
                       ? () {
